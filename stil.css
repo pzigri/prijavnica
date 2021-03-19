@@ -1,0 +1,55 @@
+body{
+    background-image: url(pozadina.jpg);
+    background-attachment: fixed;
+    text-align: center;
+    padding: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    page-break-after: auto;
+    page-break-inside: auto;
+    page-break-before: auto;
+}
+
+fieldset{
+    background-color: bisque;
+    opacity: 90%;
+    width: 70%;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 1rem;
+    orphans: 1;
+    border: bisque;
+}
+
+legend{
+    border: 5px solid sandybrown;
+    background-color: sandybrown;
+    color: white;
+}
+
+div.unos{
+    margin: 10px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    margin: auto;
+    text-align: center;
+    width: 500px;
+    outline: 3px double sandybrown;
+    box-sizing: border-box;
+    background-color: sandybrown;
+    line-height: 2.5rem;
+}
+
+h2{
+    margin: auto;
+    text-align: center;
+    width: 400px;
+    outline: 2px solid sandybrown;
+    box-sizing: border-box;
+    background-color: sandybrown;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stil.css">
+    <title>Prijava ispita</title>
+</head>
+
+<body>
+    <h1>Filozofski fakultet Osijek</h1>
+    <br />
+    <h2>~ prijava ispita 2020./2021. ~</h2>
+
+    <br />
+
+    <form action="prijava.php" method="GET">
+
+        <fieldset class="center">
+            <legend>Unesite tražene podatke kako biste prijavili ispit!</legend>
+
+            <div class="unos">
+                <label for="ime">Ime</label>
+                <input type="text" id="ime">
+            </div>
+
+            <div class="unos">
+                <label for="prezime">Prezime</label>
+                <input type="text" id="prezime">
+            </div>
+
+            <div class="unos">
+                <label for="korisnickoime">Korisničko ime</label>
+                <input type="text" id="korisnickoime">
+            </div>
+
+            <div class="unos">
+                <label for="lozinka">Lozinka</label>
+                <input type="password" name="pass" id="lozinka">
+            </div>
+
+            <br />
+
+            <div class="unos">
+                <p>Vrsta studija:</p>
+                <input list="lista">
+                <datalist id="lista">
+                    <option value="1">Preddiplomski studij</option>
+                    <option value="2">Diplomski studij</option>
+                    <option value="3">Postdiplomski studij</option>
+                </datalist>
+            </div>
+
+            <br />
+
+            <div class="unos">
+                <label for="kolegij">Kolegij:</label>
+                <select id="kolegij">
+                    <optgroup label="Obvezni predmeti">
+                        <option value="1">Oblikovanje mrežnih stranica</option>
+                        <option value="2">Baze podataka</option>
+                        <option value="3">Sociologija knjige i čitanja</option>
+                        <option value="4">Organizacija informacija</option>
+                        <option value="5">Organizacija i poslovanje informacijskih ustanova</option>
+                        <option value="6">Tjelesna i zdravstvena kultura</option>
+                    </optgroup>
+                    <optgroup label="Izborni predmeti">
+                        <option value="7">Hrvatsko novinstvo</option>
+                        <option value="8">Engleski za humanističke i društvene znanosti</option>
+                        <option value="7">Sveučilišno knjižarstvo</option>
+                        <option value="7">Statistička obrada podataka</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <br />
+
+            <div class="unos">
+                <p>Redni broj izlaska:</p>
+                <label for="prviput">Prvi put</label>
+                <input type="radio" name="p1" id="prviput">
+                <br />
+                <label for="drugiput">Drugi put</label>
+                <input type="radio" name="p2" id="drugiput">
+                <br />
+                <label for="treciput">Treći put</label>
+                <input type="radio" name="p3" id="treciput">
+                <br />
+                <label for="cetvrtiput">Četvrti put</label>
+                <input type="radio" name="p4" id="cetvrtiput">
+            </div>
+
+            <br />
+
+            <div class="unos">
+                <label for="datum">Datum roka</label>
+                <input type="date" name="date" id="datum">
+            </div>
+
+            <br />
+
+            <div class="unos">
+                <label for="unosteksta">Preferirate li pisanje ispita online ili fizički u učionici? Navedite
+                    razlog!</label>
+                <br /><textarea id="unosteksta" cols="100" rows="5"></textarea>
+            </div>
+
+            <fieldset class="center" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                <p>Prijavljeni ispiti (+1 označava ispit koji upravo prijavljujete)</p>
+                <input type="range" id="b" name="b" value="4" max="14" /> +
+                <input type="number" id="a" name="a" value="1" /> =
+                <output name="result" for="a b">5</output>
+            </fieldset>
+
+            <br />
+            <br />
+
+            <details>
+                <summary>Napomena</summary>
+                <p>Ukoliko vam je nešto nejasno ili imate bilo kakvih problema ili pitanja, obratite se voditelju vašega
+                    odsjeka!</p>
+            </details>
+        </fieldset>
+
+        <fieldset class="center">
+            <label for="polozeniispiti">Položeni ispiti</label>
+            <meter id="polozeniispiti" value="5" min="0" max="7">4 od 7</meter>
+        </fieldset>
+
+        <fieldset class="center">
+            <button type="button" onclick="alert('Prijavili ste ispit. Sretno! :)')">Prijavi</button><br />
+            <br /><progress value="100" max="100"></progress>
+            <br />
+            <br /><input type="Submit" value="Izađi">
+            <br />
+            <br /><button type="button">Prijavi neki drugi predmet</button>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
